@@ -1,6 +1,7 @@
 package com.choudhury.boilerplate.pojo.value;
 
 import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
@@ -12,7 +13,9 @@ class LombokPointTest {
     void testPojo(){
         LombokPoint underTest = new LombokPoint(123.45d, 987.65d);
 
-        System.out.println("X ="+underTest.getX());
+        // debugging underTest.getX() will not take to Java Source (method only exists in bytecode)
+        double x = underTest.getX();
+        System.out.println("X ="+ x);
         System.out.println("Y="+underTest.getY());
         System.out.println(underTest);
 
